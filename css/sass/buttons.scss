@@ -1,0 +1,18 @@
+//buttons
+.btn {
+    display: inline-block;
+    text-align: center;
+    border: 0 none;
+    background-color: $red;
+    padding: 17px 40px 15px;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    &.px-wide {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}

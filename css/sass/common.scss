@@ -1,0 +1,292 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    line-height: 120%;
+}
+
+h1 {
+    @media (min-width: 992px) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    @media (min-width: 992px) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    @media (min-width: 992px) {
+        font-size: 1.75rem;
+    }
+}
+
+h4 {
+    @media (min-width: 992px) {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    @media (min-width: 992px) {
+        font-size: 1.25rem;
+    }
+}
+
+h6 {
+    @media (min-width: 992px) {
+        font-size: 1rem;
+    }
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #09C6F9;
+}
+
+small {
+    font-size: 12px;
+    line-height: 140%;
+}
+
+//texts 
+.text {
+    &-end {
+        text-align: right;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    @media (min-width: 900px) {
+        &-md {
+            &-end {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.fs {
+    &-14 {
+        font-size: 14px;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 900px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+.purple {
+    color: $purple;
+}
+
+//form
+.form-group {
+    margin-bottom: 17px;
+
+    .help-block {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 12px;
+        color: $red;
+
+        ul {
+            margin: 0;
+            padding: 12px 0 0;
+
+            li {
+                list-style-type: none;
+                line-height: 135%;
+            }
+        }
+    }
+
+    &.error {
+        .form-control {
+            border-color: $red;
+        }
+    }
+}
+
+.form-label {
+    display: block;
+    line-height: 1.35rem;
+    margin-bottom: 3px;
+}
+
+.form-control {
+    border: 1px solid #E6E6EF;
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+
+    &::placeholder {
+        color: #969696;
+    }
+
+    &:focus {
+        border: 1px solid $blue;
+        outline: 0 none;
+    }
+}
+
+//flex columns
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-left: -20px;
+
+    @media (min-width: 900px) {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    >* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+
+
+        @media (min-width: 900px) {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .col-md-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .col-lg-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+}
+
+.gy-1 {
+    margin-top: -20px;
+
+    >* {
+        margin-top: 20px;
+    }
+}
+
+//margins
+// 1 = .25rem
+// 2 = .5rem
+// 3 = 1rem
+// 4 = 1.5rem
+// 4_5 = 2rem
+// 5 = 3rem
+.m {
+    &t {
+        &-0 {
+            margin-top: 0;
+        }
+
+        &-1 {
+            margin-top: .25rem;
+        }
+
+        &-2 {
+            margin-top: .5rem;
+        }
+
+        &-10 {
+            margin-top: 10px;
+        }
+    }
+
+    &b {
+        &-0 {
+            margin-bottom: 0;
+        }
+
+        &-3 {
+            margin-bottom: 1rem;
+        }
+
+        &-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        &-4_5 {
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            &-md {
+                &-0 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
